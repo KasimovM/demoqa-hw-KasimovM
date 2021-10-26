@@ -1,10 +1,12 @@
 package gmail.mrkvktrvch;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestingPracticeForm {
@@ -24,6 +26,9 @@ public class TestingPracticeForm {
     $("#userNumber").setValue("1234567890");
     $("#dateOfBirthInput").click();
     $(".react-datepicker__month-select").selectOptionByValue("4");
+    $(".react-datepicker__year-select").selectOptionByValue("1993");
+    $$(".react-datepicker__day").find(text("16"));
+
 
 
 
