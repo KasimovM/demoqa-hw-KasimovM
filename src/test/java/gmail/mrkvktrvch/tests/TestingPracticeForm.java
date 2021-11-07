@@ -19,7 +19,6 @@ public class TestingPracticeForm extends TestBase {
     @Test
     void registrationTest() {
         registrationPage
-                .openPage()
                 .setFirstName("Mark")
                 .setLastName("Kasimov")
                 .setEmail("mrkvktrvch@gmail.com")

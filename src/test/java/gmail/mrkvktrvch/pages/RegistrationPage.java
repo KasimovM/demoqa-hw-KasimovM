@@ -26,11 +26,6 @@ public class RegistrationPage {
     public CalendarComponent calendarComponent = new CalendarComponent();
 
     //actions
-    public RegistrationPage openPage () {
-        open("https://demoqa.com/automation-practice-form");
-        return this;
-    }
-
     public RegistrationPage setFirstName (String value) {
         firstNameInput.setValue(value);
         return this;
