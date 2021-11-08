@@ -3,6 +3,8 @@ package gmail.mrkvktrvch.pages;
 import com.codeborne.selenide.SelenideElement;
 import gmail.mrkvktrvch.pages.components.CalendarComponent;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -12,7 +14,7 @@ public class RegistrationPage {
     private SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
-            userEmailInput = $("#userEmail").setValue("mrkvktrvch@gmail.com"),
+            userEmailInput = $("#userEmail"),
             genderRadioButton = $("[for=gender-radio-1]"),
             userNumberInput = $("#userNumber"),
             subjectsInput =   $("#subjectsInput"),
@@ -21,7 +23,9 @@ public class RegistrationPage {
             addressInput =  $("#currentAddress"),
             stateInput =  $("#react-select-3-input"),
             cityInput =  $("#react-select-4-input"),
-            submitButton = $(".btn.btn-primary");
+            submitButton = $(".btn.btn-primary"),
+            submitMessage = $("#example-modal-sizes-title-lg"),
+            resultsTable = $(".table-responsive");
 
     public CalendarComponent calendarComponent = new CalendarComponent();
 
@@ -85,4 +89,11 @@ public class RegistrationPage {
         submitButton.pressEnter();
         return this;
     }
+
+    public RegistrationPage checkResultTable(String key, String value) {
+        submitMessage.shouldHave(text("Thanks for submitting the form"));
+        resultsTable.$(byText(key)).parent().shouldHave(text(value));
+        return this;
+    }
+
 }
