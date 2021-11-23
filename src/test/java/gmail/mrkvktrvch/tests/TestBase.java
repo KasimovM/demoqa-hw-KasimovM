@@ -10,7 +10,6 @@ public class TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
-
     @BeforeAll
     static void beforeAll() {
         Configuration.startMaximized = true;

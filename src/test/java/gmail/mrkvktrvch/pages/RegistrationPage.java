@@ -1,12 +1,9 @@
 package gmail.mrkvktrvch.pages;
-
 import com.codeborne.selenide.SelenideElement;
 import gmail.mrkvktrvch.pages.components.CalendarComponent;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationPage {
 

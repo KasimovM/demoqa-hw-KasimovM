@@ -1,19 +1,5 @@
 package gmail.mrkvktrvch.tests;
-
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.commands.UploadFile;
-import com.codeborne.selenide.selector.ByText;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-
-import java.io.File;
-
-import static com.codeborne.selenide.CollectionCondition.texts;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
-
 public class TestingPracticeForm extends TestData {
 
     @Test
