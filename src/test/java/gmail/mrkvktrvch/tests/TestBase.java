@@ -24,8 +24,5 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-
-        open("https://demoqa.com/automation-practice-form");
     }
-
 }

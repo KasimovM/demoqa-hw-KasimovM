@@ -1,12 +1,15 @@
 package gmail.mrkvktrvch.tests;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class TestingPracticeForm extends TestData {
 
     @Test
     void registrationTest() {
+        open("https://demoqa.com/automation-practice-form");
+
         step("Fill students registration form", () -> {
             step("Fill common data", () -> {
                 registrationPage
